@@ -11,13 +11,14 @@ import org.powerbot.game.api.wrappers.Area;
 import org.powerbot.game.api.wrappers.Tile;
 import org.powerbot.game.api.wrappers.map.TilePath;
 
+TriForceDraynorFisher
 public class Banking extends Node {
 
   public static final Area FISH_SPOT = new Area(new Tile[] {
 			new Tile(3098, 3247, 0), new Tile(3101, 3225, 0),
 			new Tile(3087, 3223, 0), new Tile(3081, 3247, 0) });
 
-	private static Tile[] toBank2 = new Tile[] { new Tile(3086, 3230, 0),
+	private static Tile[] toBank = new Tile[] { new Tile(3086, 3230, 0),
 			new Tile(3086, 3239, 0), new Tile(3087, 3248, 0),
 			new Tile(3092, 3244, 0) };
 
@@ -30,7 +31,7 @@ public class Banking extends Node {
 	@Override
 	public void execute() {
 		Paint.status = "Walking to bank";
-		walk(toBank2);
+		walk(toBank);
 		while (!Bank.isOpen()) {
 			if (!Players.getLocal().isMoving()) {
 				Paint.status = "Opening Bank";
@@ -43,7 +44,7 @@ public class Banking extends Node {
 		Paint.status = "Closing Bank";
 		Bank.close();
 		Paint.status = "Walking to fishing spot";
-		walkReverse(toBank2);
+		walkReverse(toBank);
 		while (!Fish.FISH_SPOT.contains(Players.getLocal())) {
 			Task.sleep(500);
 		}
