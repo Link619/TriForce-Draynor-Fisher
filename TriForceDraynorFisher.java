@@ -16,10 +16,9 @@ import org.powerbot.game.api.util.Random;
 import org.powerbot.game.client.Client;
 
 /**
- * @author Sk1tzN4sty
+ * @author DarkLink
  */
-
-@Manifest(authors = { "DarkLink" }, name = "TriForce Draynor Fisher", version = 1.0, description = "Draynor Fisher For Noobs")
+@Manifest(authors = { "DarkLink" }, name = "TriForce Draynor Fisher", version = 1.3, description = "Draynor Fisher For Noobs")
 public class TriForceDraynorFisher extends ActiveScript implements
   	PaintListener, MessageListener {
 
