@@ -1,6 +1,3 @@
-/**
- * 
- */
 package TriForceDraynorFisher;
 
 import org.powerbot.core.script.job.Task;
@@ -17,11 +14,10 @@ import org.powerbot.game.api.wrappers.Area;
 import org.powerbot.game.api.wrappers.Tile;
 import org.powerbot.game.api.wrappers.interactive.NPC;
 
-import F2PSheeps.Paint;
+import TriForceDraynorFisher.Paint;
 
 /**
- * @author Sk1tzN4sty
- * 
+ * @author DarkLink
  */
 public class Fish extends Node {
 
