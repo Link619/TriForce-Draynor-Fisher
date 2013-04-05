@@ -10,6 +10,9 @@ import org.powerbot.game.api.methods.tab.Inventory;
 import org.powerbot.game.api.methods.widget.Camera;
 import org.powerbot.game.api.wrappers.interactive.NPC;
 
+/**
+ * @author DarkLink
+ * */
 public class Antiban extends Node {
 
   @Override
