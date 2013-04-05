@@ -14,13 +14,16 @@ import org.powerbot.game.api.util.Timer;
 public class Paint {
 
   	public static int shrimpCounter;
+  	public static int anchovyCounter;
 	public static Timer runTime = new Timer(0);
 	public static String status;
 
 	public static void evokePaint(Graphics g1) {
 
-		int perhour = (int) Math.floor((shrimpCounter * 3600000D / runTime
+		int sperhour = (int) Math.floor((shrimpCounter * 3600000D / runTime
 				.getElapsed()));
+		int aperhour = (int) Math.floor((anchovyCounter * 3600000D / runTime
+				.getElapsed()));		
 
 		Graphics2D g = (Graphics2D) g1;
 		g.translate(0, 50);
@@ -28,10 +31,11 @@ public class Paint {
 		g.setColor(Color.GREEN);
 		g.drawString("TriForce Fisher", 15, 29);
 		g.drawString("Run Time: " + runTime.toElapsedString(), 15, 49);
-		g.drawString("Shrimp Caught: " + Integer.toString(shrimpCounter), 15,
-				69);
-		g.drawString("Shrimps P/h: " + perhour, 15, 89);
-		g.drawString("Status: " + status, 15, 109);
+		g.drawString("Shrimp Caught: " + Integer.toString(shrimpCounter), 15, 69);
+		g.drawString("Shrimps P/h: " + sperhour, 15, 89);
+		g.drawString("Anchovy Caught: " + Integer.toString(anchovyCounter), 15, 109);
+		g.drawString("Anchovy P/h: " + aperhour, 15, 129);
+		g.drawString("Status: " + status, 15, 149);
 	}
 
 	public static void evokeMouse(Graphics g) {
