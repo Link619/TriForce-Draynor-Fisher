@@ -77,5 +77,11 @@ public class TriForceDraynorFisher extends ActiveScript implements
 		} else {
 			Fish.catched = false;
 		}
+		if (message.contains("catch some anchovies")) {
+			Fish.catched = true;
+			Paint.anchovyCounter++;
+		} else {
+			Fish.catched = false;
+		}
 	}
 }
